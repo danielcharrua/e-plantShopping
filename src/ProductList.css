@@ -163,6 +163,14 @@ body {
 .cart{
     color: white;
     display: flex;
+    position: relative;
+}
+.cart span{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 400;
+    left: 27px;
+    top: 16px;
 }
 .cart_quantity_count{
     margin-top: 16px;
@@ -186,6 +194,10 @@ body {
     border-left: none;
     border-right: none;
 
+    
+}
+.product-category h2 {
+    text-align: center;
     
 }
 /* Add Media Query for responsiveness */

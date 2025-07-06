@@ -1,5 +1,9 @@
+.aboutus_container{
+  z-index: 1;
+  width: 60%;
+}
+
 .about-us-container {
-    width: 1000px;
     /* margin: 0 auto; */
     /* padding: 20px; */
     /* background-color: red; */
