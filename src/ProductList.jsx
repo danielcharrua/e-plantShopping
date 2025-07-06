@@ -313,11 +313,10 @@ function ProductList({ onHomeClick }) {
                                         <p className="cost">{plant.cost}</p>
                                         <button 
                                             className={
-                                            cartItems[plantIndex] && cartItems[plantIndex].quantity > 0
-                                                ? "product-button added-to-cart"
-                                                : "product-button"
+                                            //search for the plant in the cartItems object
+                                            cartItems.some(item => item.name === plant.name) ? "product-button added-to-cart" : "product-button"
                                             }
-                                            disabled={cartItems[plantIndex] && cartItems[plantIndex].quantity > 0}
+                                            disabled={cartItems.some(item => item.name === plant.name)} // Disable button if already added
                                             onClick={() => handleAddToCart(plant)}
                                         >
                                             Add to Cart

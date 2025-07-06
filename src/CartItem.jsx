@@ -9,7 +9,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
-    console.log("Calculating total amount for cart:", cart);
+    //console.log("Calculating total amount for cart:", cart);
 
     return cart.reduce((total, item) => {
       const itemCost = parseFloat(item.cost.substring(1));
@@ -31,7 +31,7 @@ const CartItem = ({ onContinueShopping }) => {
     // Increment the quantity of the item in the cart
     const updatedQuantity = item.quantity + 1;
     dispatch(updateQuantity({ name: item.name, amount: updatedQuantity }));
-    console.log(`Incremented ${item.name} quantity to ${updatedQuantity}`);
+    //console.log(`Incremented ${item.name} quantity to ${updatedQuantity}`);
   };
 
   const handleDecrement = (item) => {
@@ -39,19 +39,19 @@ const CartItem = ({ onContinueShopping }) => {
     if (item.quantity <= 1) {
       // If quantity is 1 or less, remove the item from the cart
       dispatch(removeItem(item.name));
-      console.log(`Removed ${item.name} from cart`);
+      //console.log(`Removed ${item.name} from cart`);
       return;
     } else {
       const updatedQuantity = item.quantity - 1;
       dispatch(updateQuantity({ name: item.name, amount: updatedQuantity }));
-      console.log(`Decremented ${item.name} quantity to ${updatedQuantity}`);
+      //console.log(`Decremented ${item.name} quantity to ${updatedQuantity}`);
     }
     
   };
 
   const handleRemove = (item) => {
     dispatch(removeItem(item.name));
-    console.log(`Removed ${item.name} from cart`);
+    //console.log(`Removed ${item.name} from cart`);
   };
 
   // Calculate total cost based on quantity for an item
